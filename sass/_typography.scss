@@ -1,0 +1,39 @@
+// ...FONTS...
+@font-face {
+    font-family: 'Playfair_Display';
+    src: url('../fonts/Playfair_Display/playfairDisplay-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Franklin';
+    src: url('../fonts/Libre_Franklin/Libre_Franklin-Regular.ttf') format("truetype");
+}
+
+.heading-1 {
+    font-family: $font-secondary;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.heading-2 {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.heading-3 {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.heading-4 {
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
