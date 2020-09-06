@@ -1,34 +1,47 @@
 @font-face {
   font-family: 'Playfair_Display';
-  src: url("../fonts/Playfair_Display/playfairDisplay-Regular.ttf") format("truetype"); }
+  src: url("/fonts/Playfair_Display/playfairDisplay-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Playfair_Display-bold';
+  src: url("/fonts/Playfair_Display/playfairDisplay-Black.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-regular.ttf") format("truetype"); }
+  src: url("/fonts/Roboto/Roboto-Regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Franklin';
-  src: url("../fonts/Libre_Franklin/Libre_Franklin-Regular.ttf") format("truetype"); }
+  font-family: 'Roboto-Light';
+  src: url("/fonts/Roboto/Roboto-Light.ttf") format("truetype"); }
 
 .heading-1 {
-  font-family: "Playfair_Display", serif;
-  font-weight: 900;
+  font-family: "Playfair_Display-bold", serif;
   font-size: 3rem; }
 
 .heading-2 {
   font-family: "Playfair_Display", serif;
-  font-weight: 600;
   font-size: 2.5rem; }
 
 .heading-3 {
   font-family: "Playfair_Display", serif;
-  font-weight: 600;
   font-size: 2rem; }
 
 .heading-4 {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
   font-size: 1.6rem; }
+
+.paragraph {
+  letter-spacing: .5px;
+  font-family: "Roboto-Light", sans-serif; }
+
+.u-margin-top--small {
+  margin-top: 2rem; }
+
+.u-margin-top--medium {
+  margin-top: 4rem; }
+
+.u-margin-top--big {
+  margin-top: 8rem; }
 
 html {
   font-size: 62,5%;
@@ -49,11 +62,76 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 50vh repeat(6, min-content);
+  grid-template-rows: 90vh min-content 50vh repeat(6, min-content);
   grid-template-columns: [full-start] minmax(10rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(10rem, 1fr) [full-end]; }
 
 .header {
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: minmax(6rem, 1fr) auto 1fr;
+  grid-template-columns: 10rem minmax(min-content, max-content) 10rem;
+  align-content: center;
+  justify-items: center;
+  position: relative;
+  background-image: linear-gradient(to left top, rgba(49, 29, 94, 0.8), rgba(49, 29, 94, 0.8)), url("/images/forest.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem; }
+  .nav__logo {
+    display: block;
+    width: 3.5rem;
+    height: 3.7rem; }
+  .nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .nav__list--item {
+      display: inline;
+      padding: .5rem;
+      cursor: default; }
+      .nav__list--item:not(:last-child) {
+        margin-right: 1rem; }
+  .nav__link:link, .nav__link:visited {
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s ease-in-out; }
+  .nav__link:hover {
+    color: #00e0d0; }
+
+.about {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  color: #fff; }
+  .about__text {
+    width: 80%; }
+
+.slide-nav {
+  grid-column: 2 / 3;
+  grid-row: 3 / -1;
+  cursor: default; }
+  .slide-nav__item {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer; }
+
+.active-img {
+  background-color: #00e0d0; }
 
 .story {
   grid-column: center-start / center-end; }
@@ -91,3 +169,25 @@ body {
 
 .footer {
   grid-column: full-start / full-end; }
+
+.middle-line {
+  width: 60px;
+  height: 2px;
+  display: block;
+  background-color: #00e0d0;
+  margin: 1.5rem 0; }
+
+.button {
+  display: block; }
+  .button__link:link, .button__link:visited {
+    padding: 1rem 1.5rem;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: #00e0d0;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .5s; }
+  .button__link:hover {
+    color: #4aa3cc; }

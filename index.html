@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
     integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link rel="shortcut icon" href="./images/logo-small.png" type="image/png">
 
 </head>
 
@@ -18,37 +19,43 @@
   <div class="container">
 
     <header class="header">
-      <div id="navMenu">
-        <div class="navbar-toggle" id="js-navbar-toggle">
-          <i class="fa fa-bars"></i>
+      <nav class="nav">
+        <img class="nav__logo" src="images/logo-small.png" alt="logo">
+        <div class="nav__button" id="hamburger">
+          <span class="nav__button--item"></span>
         </div>
-        <img class="logo" src="images/logo.png" alt="logo">
-        <ul class="navbar" id="topNavbar">
-          <li> <a href="#home">home</a> </li>
-          <li> <a href="#story">about</a> </li>
-          <li> <a href="#expertise">expertise</a> </li>
-          <li> <a href="#team">teams</a> </li>
-          <li> <a href="#portfolio">works</a> </li>
-          <li> <a href="#form">people say</a> </li>
-          <li> <a href="#contact">contakt</a> </li>
+        <ul class="nav__list">
+          <li class="nav__list--item"> <a href="#home" class="nav__link">Home</a> </li>
+          <li class="nav__list--item"> <a href="#story" class="nav__link">About</a> </li>
+          <li class="nav__list--item"> <a href="#expertise" class="nav__link">Expertise</a> </li>
+          <li class="nav__list--item"> <a href="#team" class="nav__link">Teams</a> </li>
+          <li class="nav__list--item"> <a href="#portfolio" class="nav__link">Works</a> </li>
+          <li class="nav__list--item"> <a href="#form" class="nav__link">People say</a> </li>
+          <li class="nav__list--item"> <a href="#contact" class="nav__link">Contakt</a> </li>
         </ul>
+      </nav>
+
+      <div class="about">
+        <h1 class="heading-1">We Are Awesome Creative Agency</h1>
+        <div class="middle-line"></div>
+        <p class="paragraph about__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+          Aenean sollicitudin,lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+          sed odio sit amet nibhvulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+        <div class="button u-margin-top--medium">
+          <a href="#link" class="button__link" > learn more </a>
+        </div>
       </div>
 
-      <div id="about">
-        <h1 class="heading-1">We Are Awesome Creative Agency</h1>
-        <p class="text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
-          sollicitudin,lorem <br>
-          quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
-          vulputate <br>
-          cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-        <div class="button">
-          <a href="#link"> learn more </a>
-        </div>
+      <div class="slide-nav u-margin-top--medium">
+        <div class="slide-nav__item active-img"></div>
+        <div class="slide-nav__item"></div>
+        <div class="slide-nav__item"></div>
+        <div class="slide-nav__item"></div>
       </div>
     </header>
 
     <section class="story" id="story-section">
-      <img src="images/biglogo.png" alt="logo">
+      <img src="images/logo-big.png" alt="logo">
       <div class="story-text">
         <h2 class="heading-2">our story</h2>
         <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
@@ -149,40 +156,40 @@
 
       <div class="gallery">
         <figure class="gallery__item">
-          <img src="./images/img1.jpg" alt="image 1" class="gallery__img">
+          <img src="./images/img-1.jpg" alt="image 1" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img2.jpg" alt="image 2" class="gallery__img">
+          <img src="./images/img-2.jpg" alt="image 2" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img3.jpg" alt="image 3" class="gallery__img">
+          <img src="./images/img-3.jpg" alt="image 3" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img4.jpg" alt="image 4" class="gallery__img">
+          <img src="./images/img-4.jpg" alt="image 4" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img5.jpg" alt="image 5" class="gallery__img">
+          <img src="./images/img-5.jpg" alt="image 5" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img6.jpg" alt="image 6" class="gallery__img">
+          <img src="./images/img-6.jpg" alt="image 6" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img7.jpg" alt="image 7" class="gallery__img">
+          <img src="./images/img-7.jpg" alt="image 7" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img8.jpg" alt="image 8" class="gallery__img">
+          <img src="./images/img-8.jpg" alt="image 8" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img9.jpg" alt="image 9" class="gallery__img">
+          <img src="./images/img-9.jpg" alt="image 9" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img10.jpg" alt="image 10" class="gallery__img">
+          <img src="./images/img-10.jpg" alt="image 10" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img11.jpg" alt="image 11" class="gallery__img">
+          <img src="./images/img-11.jpg" alt="image 11" class="gallery__img">
         </figure>
         <figure class="gallery__item">
-          <img src="./images/img12.jpg" alt="image 12" class="gallery__img">
+          <img src="./images/img-12.jpg" alt="image 12" class="gallery__img">
         </figure>
       </div>
 
@@ -204,7 +211,7 @@
 
         <div class="workers__slider">
           <i class="fas fa-angle-left"></i>
-          <img src="./images/laseczka.jpg" alt="">
+          <img src="./images/woomen.jpg" alt="">
           <i class="fas fa-angle-right"></i>
         </div>
 

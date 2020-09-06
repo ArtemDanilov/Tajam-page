@@ -1,0 +1,20 @@
+.button {
+    display: block;
+    
+    &__link:link,
+    &__link:visited {
+        padding: 1rem 1.5rem;
+        border: 1px solid currentColor;
+        border-radius: 3px;
+        font-size: 1rem;
+        color: $color-blue-light;
+        font-family: $font-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all .5s;
+    }
+
+    &__link:hover {
+        color: $color-blue-dark;
+    }
+}
