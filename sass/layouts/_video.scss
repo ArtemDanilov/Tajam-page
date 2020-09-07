@@ -1,3 +1,32 @@
 .video {
     grid-column: full-start / full-end;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: linear-gradient(to left, rgba($color-fiolet-light, .9), rgba($color-fiolet-light, .9)), url("/images/video.jpg");
+    background-size: cover;
+    background-position: center;
+    color: $color-white;
+
+    &__play-btn {
+        background: none;
+        border: none;
+        border-radius: 50%;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all .2s;
+    }
+    
+    &__play-btn:hover {
+        transform: scale(1.1);
+    }
+
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        fill: $color-white;
+    }
 }

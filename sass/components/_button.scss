@@ -1,9 +1,9 @@
 .button {
-    display: block;
+    display: inline-block;
     
-    &__link:link,
-    &__link:visited {
-        padding: 1rem 1.5rem;
+    &:link,
+    &:visited {
+        padding: .5rem .8rem;
         border: 1px solid currentColor;
         border-radius: 3px;
         font-size: 1rem;
@@ -11,10 +11,14 @@
         font-family: $font-primary;
         text-transform: uppercase;
         text-decoration: none;
-        transition: all .5s;
+        transition: color .5s, transform .2s;
     }
 
-    &__link:hover {
+    &:hover {
         color: $color-blue-dark;
+    }
+
+    &:active {
+        transform: translateY(2px);
     }
 }

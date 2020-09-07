@@ -16,7 +16,8 @@
 
 .heading-1 {
   font-family: "Playfair_Display-bold", serif;
-  font-size: 3rem; }
+  font-size: 3rem;
+  letter-spacing: 1px; }
 
 .heading-2,
 .heading-3,
@@ -33,7 +34,7 @@
 
 .heading-4 {
   font-family: "Roboto", sans-serif;
-  font-size: 1.6rem; }
+  font-size: 1.5rem; }
 
 .paragraph {
   letter-spacing: .5px;
@@ -67,7 +68,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 90vh min-content 50vh repeat(6, min-content);
+  grid-template-rows: 90vh min-content 70vh repeat(6, min-content);
   grid-template-columns: [full-start] minmax(10rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(10rem, 1fr) [full-end]; }
 
 .header {
@@ -150,7 +151,28 @@ body {
     grid-column: col-start 5 / col-end 10; }
 
 .video {
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to left, rgba(49, 29, 94, 0.9), rgba(49, 29, 94, 0.9)), url("/images/video.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff; }
+  .video__play-btn {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .2s; }
+  .video__play-btn:hover {
+    transform: scale(1.1); }
+  .video__icon {
+    width: 5rem;
+    height: 5rem;
+    fill: #fff; }
 
 .features {
   grid-column: center-start / center-end; }
@@ -191,9 +213,9 @@ body {
   margin: 1.5rem 0; }
 
 .button {
-  display: block; }
-  .button__link:link, .button__link:visited {
-    padding: 1rem 1.5rem;
+  display: inline-block; }
+  .button:link, .button:visited {
+    padding: .5rem .8rem;
     border: 1px solid currentColor;
     border-radius: 3px;
     font-size: 1rem;
@@ -201,6 +223,8 @@ body {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     text-decoration: none;
-    transition: all .5s; }
-  .button__link:hover {
+    transition: color .5s, transform .2s; }
+  .button:hover {
     color: #4aa3cc; }
+  .button:active {
+    transform: translateY(2px); }
