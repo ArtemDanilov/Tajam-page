@@ -9,8 +9,7 @@
         text-align: center;
     }
 
-    &__about--text {
-        font-family: 'Playfair_Display', serif;
+    h6, p {
         color: $color-grey;
     }
 
@@ -30,9 +29,6 @@
     padding: 2rem;
     text-align: center;
 
-    p {
-        color: $color-grey;
-    }
 
     &__icon {
         font-size: 3.5rem;
