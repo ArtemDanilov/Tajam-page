@@ -21,7 +21,8 @@
 
 .heading-2,
 .heading-3,
-.heading-4 {
+.heading-4,
+.heading-5 {
   text-transform: uppercase; }
 
 .heading-2 {
@@ -36,17 +37,24 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem; }
 
+.heading-5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem; }
+
 .paragraph {
   letter-spacing: .5px;
   font-family: "Roboto-Light", sans-serif; }
 
-.u-margin-top--small {
+.u-margin-top--xs {
+  margin-top: 1rem; }
+
+.u-margin-top--s {
   margin-top: 2rem; }
 
-.u-margin-top--medium {
+.u-margin-top--m {
   margin-top: 4rem; }
 
-.u-margin-top--big {
+.u-margin-top--l {
   margin-top: 8rem; }
 
 html {
@@ -164,18 +172,48 @@ body {
     background: none;
     border: none;
     border-radius: 50%;
-    padding: 1rem;
+    padding: .5rem;
     cursor: pointer;
     transition: all .2s; }
   .video__play-btn:hover {
     transform: scale(1.1); }
   .video__icon {
-    width: 5rem;
-    height: 5rem;
-    fill: #fff; }
+    font-size: 5rem;
+    margin-left: 0;
+    display: inline;
+    text-align: center;
+    color: #fff; }
 
 .features {
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  margin: 6rem 0; }
+  .features__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+  .features__about--text {
+    font-family: 'Playfair_Display', serif;
+    color: #413d4b; }
+  .features__box {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-gap: 2rem; }
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center; }
+  .feature p {
+    color: #413d4b; }
+  .feature__icon {
+    font-size: 3.5rem;
+    background-image: linear-gradient(to right, #00e0d0 40%, #4aa3cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 .team {
   grid-column: full-start / full-end; }
@@ -205,11 +243,18 @@ body {
 .footer {
   grid-column: full-start / full-end; }
 
-.middle-line {
+.middle-line-blue {
   width: 60px;
   height: 2px;
   display: block;
   background-color: #00e0d0;
+  margin: 1.5rem 0; }
+
+.middle-line-grey {
+  width: 60px;
+  height: 2px;
+  display: block;
+  background-color: #413d4b;
   margin: 1.5rem 0; }
 
 .button {

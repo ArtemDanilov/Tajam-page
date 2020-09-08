@@ -15,7 +15,7 @@
         background: none;
         border: none;
         border-radius: 50%;
-        padding: 1rem;
+        padding: .5rem;
         cursor: pointer;
         transition: all .2s;
     }
@@ -25,8 +25,10 @@
     }
 
     &__icon {
-        width: 5rem;
-        height: 5rem;
-        fill: $color-white;
+        font-size: 5rem;
+        margin-left: 0;
+        display: inline;
+        text-align: center;
+        color: $color-white;
     }
 }

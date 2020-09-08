@@ -1,7 +1,15 @@
-.middle-line {
+.middle-line-blue {
     width: 60px;
     height: 2px;
     display: block;
     background-color: $color-blue-light;
+    margin: 1.5rem 0;
+}
+
+.middle-line-grey {
+    width: 60px;
+    height: 2px;
+    display: block;
+    background-color: $color-grey;
     margin: 1.5rem 0;
 }

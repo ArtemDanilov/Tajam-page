@@ -1,3 +1,44 @@
 .features {
     grid-column: center-start / center-end;
+    margin: 6rem 0;
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__about--text {
+        font-family: 'Playfair_Display', serif;
+        color: $color-grey;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 2rem;
+    }
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2rem;
+    text-align: center;
+
+    p {
+        color: $color-grey;
+    }
+
+    &__icon {
+        font-size: 3.5rem;
+        background-image: linear-gradient(to right, $color-blue-light 40%, $color-blue-dark);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
 }
