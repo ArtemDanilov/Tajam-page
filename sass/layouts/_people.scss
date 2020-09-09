@@ -1,0 +1,45 @@
+.people {
+    grid-column: full-start / full-end;
+
+    background-image: linear-gradient(to left top, rgba($color-fiolet-light, .8), rgba($color-fiolet-light, .8)), url("/images/forest-3.jpg");
+    background-size: cover;
+    background-position: center;
+    color: $color-white;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    &__sign {
+        font-size: 5rem;
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__arrow--prev,
+    &__arrow--next {
+        background: none;
+        border: none;
+        font-size: 3rem;
+        color: $color-white;
+        cursor: pointer;
+        padding: .2rem .5rem;
+    }
+
+    &__arrow--prev {
+        margin-right: 2rem;
+    }
+
+    &__arrow--next {
+        margin-left: 2rem;
+    }
+
+    &__slider--img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 5rem;
+    }
+}

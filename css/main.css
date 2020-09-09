@@ -62,6 +62,10 @@
 .u-margin-top--l {
   margin-top: 8rem !important; }
 
+.u-paragraph-center {
+  width: 70%;
+  margin: 0 auto; }
+
 html {
   font-size: 62,5%;
   box-sizing: border-box; }
@@ -86,11 +90,10 @@ body {
 
 .header {
   grid-column: full-start / full-end;
-  display: grid;
-  grid-template-rows: minmax(6rem, 1fr) auto 1fr;
-  grid-template-columns: 10rem minmax(min-content, max-content) 10rem;
-  align-content: center;
-  justify-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   background-image: linear-gradient(to left top, rgba(49, 29, 94, 0.8), rgba(49, 29, 94, 0.8)), url("/images/forest.jpg");
   background-size: cover;
@@ -128,14 +131,11 @@ body {
     color: #00e0d0; }
 
 .about {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   color: #fff; }
-  .about__text {
-    width: 80%; }
 
 .slide-nav {
   grid-column: 2 / 3;
@@ -270,8 +270,36 @@ body {
     height: 100%;
     object-fit: cover; }
 
-.workers {
-  grid-column: full-start / full-end; }
+.people {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(to left top, rgba(49, 29, 94, 0.8), rgba(49, 29, 94, 0.8)), url("/images/forest-3.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem; }
+  .people__sign {
+    font-size: 5rem; }
+  .people__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .people__arrow--prev, .people__arrow--next {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    padding: .2rem .5rem; }
+  .people__arrow--prev {
+    margin-right: 2rem; }
+  .people__arrow--next {
+    margin-left: 2rem; }
+  .people__slider--img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem; }
 
 .contact {
   grid-column: center-start / center-end; }
