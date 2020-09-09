@@ -1,19 +1,18 @@
 .button {
     display: inline-block;
-    
-    &:link,
-    &:visited {
-        padding: .5rem .8rem;
-        margin: 0 auto;
-        border: 1px solid currentColor;
-        border-radius: 3px;
-        font-size: 1rem;
-        color: $color-blue-light;
-        font-family: $font-primary;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: color .5s, transform .2s;
-    }
+    background: none;
+    padding: .8rem 1rem;
+    margin: 0 auto;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: $color-blue-light;
+    font-family: $font-primary;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color .5s, transform .2s;
+    cursor: pointer;
+
 
     &:hover {
         color: $color-blue-dark;

@@ -301,8 +301,28 @@ body {
     height: 5rem;
     border-radius: 5rem; }
 
-.contact {
-  grid-column: center-start / center-end; }
+.contact__form {
+  grid-column: col-start 1 / col-end 4;
+  margin-top: 6rem; }
+  .contact__form--box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+
+.contact__brands {
+  grid-column: col-start 6 / col-end 10;
+  margin-top: 6rem; }
+  .contact__brands--logos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(6rem, 10rem));
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    row-gap: 1rem; }
+  .contact__brands--img {
+    width: 80%; }
 
 .footer {
   grid-column: full-start / full-end; }
@@ -322,18 +342,19 @@ body {
   margin: 1.5rem auto; }
 
 .button {
-  display: inline-block; }
-  .button:link, .button:visited {
-    padding: .5rem .8rem;
-    margin: 0 auto;
-    border: 1px solid currentColor;
-    border-radius: 3px;
-    font-size: 1rem;
-    color: #00e0d0;
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: color .5s, transform .2s; }
+  display: inline-block;
+  background: none;
+  padding: .8rem 1rem;
+  margin: 0 auto;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: #00e0d0;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color .5s, transform .2s;
+  cursor: pointer; }
   .button:hover {
     color: #4aa3cc; }
   .button:active {
