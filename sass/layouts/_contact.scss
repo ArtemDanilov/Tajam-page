@@ -1,37 +1,70 @@
+.contact {
 
-// .contact {
-//     grid-column: center-start / center-end;
-// }
+    // ********** FORM ********** //
 
-.contact__form {
-    grid-column: col-start 1 / col-end 4;
+    &__form {
+        grid-column: col-start 1 / col-end 4;
 
-    margin-top: 6rem;
+        margin-top: 6rem;
+        width: 90%;
+    }
 
-    &--box {
+    &__box {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
-}
 
-.contact__brands {
-    grid-column: col-start 6 / col-end 10;
+    &__input,
+    &__textarea {
+        font-family: $font-primary;
+        padding: 1rem;
+        font-size: 1rem;
+        color: $color-grey-light;
+        border: 1px solid currentColor;
+        border-radius: 3px;
+    }
 
-    margin-top: 6rem;
+    &__input:focus,
+    &__textarea:focus {
+        outline-color: $color-grey;
+    }
 
-    &--logos {
+    &__textarea {
+        padding: 1rem;
+        width: 100%;
+        height: 14rem;
+        resize: none;
+    }
+
+    &__btn {
+        align-self: flex-start;
+        margin: 0 !important;
+    }
+
+    &__btn:focus {
+        outline: none;
+    }
+    
+    // ********** BRAND LOGOS ********** //
+
+    &__brands {
+        grid-column: col-start 6 / col-end 10;
+
+        margin-top: 6rem;
+    }
+
+    &__logos {
         display: grid;
         grid-template-columns: repeat(2, minmax(6rem, 10rem));
         grid-template-rows: repeat(5, 1fr);
-        justify-content: center;
         align-items: center;
         column-gap: 2rem;
         row-gap: 1rem;
     }
 
-    &--img {
+    &__img {
         width: 80%;
     }
 
