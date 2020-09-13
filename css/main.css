@@ -353,7 +353,7 @@ body {
 .footer {
   grid-column: full-start / full-end;
   display: grid;
-  grid-template-rows: repeat(2, min-content);
+  grid-template-rows: repeat(3, min-content);
   grid-template-columns: minmax(10rem, 1fr) repeat(3, minmax(18rem, 24rem)) minmax(10rem, 1fr);
   row-gap: 4rem;
   column-gap: 2rem;
@@ -423,6 +423,15 @@ body {
     .footer__side--link:not(:last-child) {
       margin-right: 3rem; }
     .footer__side--link:hover {
+      color: #00e0d0; }
+  .footer__license {
+    grid-row: 3 / 4;
+    grid-column: 2 / 5;
+    text-align: right; }
+  .footer__license--link {
+    color: #fff;
+    transition: all .3s ease-in-out; }
+    .footer__license--link:hover {
       color: #00e0d0; }
 
 .middle-line-blue {

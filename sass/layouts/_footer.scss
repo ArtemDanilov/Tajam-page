@@ -2,7 +2,7 @@
     grid-column: full-start / full-end;
 
     display: grid;
-    grid-template-rows: repeat(2, min-content);
+    grid-template-rows: repeat(3, min-content);
     grid-template-columns: minmax(10rem, 1fr) repeat(3, minmax(18rem, 24rem)) minmax(10rem, 1fr);
     row-gap: 4rem;
     column-gap: 2rem;
@@ -108,4 +108,18 @@
         &:hover { color: $color-blue-light; }
     }
 
+    &__license {
+        grid-row: 3 / 4;
+        grid-column: 2 / 5;
+        text-align: right;
+    }
+    
+    &__license--link {
+        color: $color-white;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $color-blue-light;
+        }
+    }
 }
