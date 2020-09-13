@@ -1,3 +1,111 @@
 .footer {
     grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: minmax(10rem, 1fr) repeat(3, minmax(18rem, 24rem)) minmax(10rem, 1fr);
+    row-gap: 4rem;
+    column-gap: 2rem;
+
+    background-image: linear-gradient(to left, rgba($color-fiolet-light, .9), rgba($color-fiolet-light, .9)), url("../images/footer_img.jpg");
+    background-size: cover;
+    background-position: center;
+    color: $color-white;
+    padding: 6rem 0;
+    margin-top: 6rem;
+
+    &__caption {
+        margin: .8rem 0;
+    }
+
+    // ********** TEXT ********** //
+
+    &__text {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+
+    // ********** LOCATION ********** //
+
+    &__location {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    }
+
+    // ********** SUBSCRIBE ********** //
+
+    &__subscribe {
+        grid-row: 1 / 2;
+        grid-column: 4 / 5;
+    }
+
+    &__email {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        width: 100%;
+        padding: .8rem 1.5rem;
+        margin-right: .5rem;
+        background: none;
+        color: $color-grey-light;
+        border: 1px solid currentColor;
+    }
+
+    &__btn {
+        font-size: 1.5rem;
+        padding: .45rem 1.4rem;
+        opacity: .5;
+        border: none;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__social--link {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid $color-white;
+        border-radius: 50%;
+        text-decoration: none;
+        color: $color-white;
+
+        &:not(:last-child) { margin-right: 2px; }
+
+        &:hover { background: $color-white; }
+
+        &:hover i { color: $color-fiolet-dark; }
+
+    }
+
+    .youtube-icon { margin-bottom: -6px; }
+
+    // ********** PRIVACY ********** //
+
+    &__bottom {
+        grid-row: 2 / 3;
+        grid-column: 2 / 5;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__side--link {
+        text-decoration: none;
+        color: $color-white;
+        transition: all .3s ease-in-out;
+
+        &:not(:last-child) { margin-right: 3rem; }
+
+        &:hover { color: $color-blue-light; }
+    }
+
 }

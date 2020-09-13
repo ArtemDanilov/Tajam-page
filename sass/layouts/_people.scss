@@ -1,13 +1,14 @@
 .people {
     grid-column: full-start / full-end;
 
-    background-image: linear-gradient(to left top, rgba($color-fiolet-light, .8), rgba($color-fiolet-light, .8)), url("/images/forest-3.jpg");
+    background-image: linear-gradient(to left top, rgba($color-fiolet-light, .8), rgba($color-fiolet-light, .8)), url("../images/forest-3.jpg");
     background-size: cover;
     background-position: center;
     color: $color-white;
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 4rem;
+    margin-bottom: 4rem;
 
     &__sign {
         font-size: 5rem;

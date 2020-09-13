@@ -7,7 +7,7 @@
     justify-content: center;
 
     position: relative;
-    background-image: linear-gradient(to left top, rgba($color-fiolet-light, .8), rgba($color-fiolet-light, .8)), url("/images/forest.jpg");
+    background-image: linear-gradient(to left top, rgba($color-fiolet-light, .8), rgba($color-fiolet-light, .8)), url("../images/forest.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -48,16 +48,14 @@
     }
 
 
-    &__link:link,
-    &__link:visited {
+    &__link {
         color: $color-white;
         text-decoration: none;
         transition: all .3s ease-in-out;
+
+        &:hover { color: $color-blue-light; }
     }
 
-    &__link:hover {
-        color: $color-blue-light;
-    }
 }
 
 .about {
