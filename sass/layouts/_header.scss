@@ -24,6 +24,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
+    transition: all .3s;
 
     &__logo {
         display: block;
@@ -84,4 +85,11 @@
 
 .active-img {
     background-color: $color-blue-light;
+}
+
+// ********** NAV ANIMATION ********** //
+
+.scroll-bg {
+    background-color: $color-fiolet-light;
+    padding: .8rem;
 }

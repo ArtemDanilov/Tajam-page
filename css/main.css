@@ -108,7 +108,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem; }
+  padding: 1rem;
+  transition: all .3s; }
   .nav__logo {
     display: block;
     width: 3.5rem;
@@ -151,6 +152,10 @@ body {
 
 .active-img {
   background-color: #00e0d0; }
+
+.scroll-bg {
+  background-color: #311d5e;
+  padding: .8rem; }
 
 .story {
   grid-column: center-start / center-end;
