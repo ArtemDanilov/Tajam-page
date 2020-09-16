@@ -1,4 +1,5 @@
-// ...COLORS...
+// ********** COLORS ********** //
+
 $color-white: #fff;
 
 $color-blue-light: #00e0d0;
@@ -10,10 +11,15 @@ $color-fiolet-dark: #09052f;
 $color-grey: #878786;
 $color-grey-light: #a7a6a6;
 
-// ...FONTS...
+// ********** FONTS ********** //
 
 $font-primary: 'Roboto', sans-serif;
 $font-primary-light: 'Roboto-Light', sans-serif;
 
 $font-secondary: 'Playfair_Display', serif;
 $font-secondary-bold: 'Playfair_Display-bold', serif;
+
+// ********** MEDIA ********** //
+
+$mq-lg: 75rem;     // 1200px
+$mq-md: 62.5rem;     // 1000px
