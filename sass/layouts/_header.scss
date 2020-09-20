@@ -32,22 +32,89 @@
         height: 3.7rem;
     }
 
+    .nav-bg {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateY(100%);
+        background-image: linear-gradient(to right top, rgba($color-fiolet-dark, 1), rgba($color-fiolet-light, 1));
+        z-index: -1;
+        transition: .3s;
+    }
+
+    // *****HAMBURGER***** //
+    &__button {
+        position: relative;
+        visibility: hidden;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &--item,
+        &--item::before,
+        &--item::after {
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: $color-white;
+        }
+
+        &--item::before {
+            content: "";
+            transform: translateY(0.6rem);
+        }
+
+        &--item::after {
+            content: "";
+            transform: translateY(-0.6rem);
+        }
+
+        @media only screen and (max-width: $mq-md) {
+            visibility: visible;
+        }
+
+    }
+
+    // ***** ***** //
+
     &__list {
         list-style: none;
         margin: 0;
         padding: 0;
+        transition: .3s;
 
-        &--item {
-            display: inline;
-            padding: .5rem;
-            cursor: default;
+        @media only screen and (max-width: $mq-md) {
+            position: fixed;
+            visibility: hidden;
+            opacity: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
 
-            &:not(:last-child) {
-                margin-right: 1rem;
-            }
+    }
+    
+    &__list--item {
+        display: inline;
+        padding: .5rem;
+        cursor: default;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        @media only screen and (max-width: $mq-md) {
+            display: block;
+            text-align: center;
+            margin-right: 0 !important;
         }
     }
-
 
     &__link {
         color: $color-white;
@@ -92,4 +159,15 @@
 .scroll-bg {
     background-color: $color-fiolet-light;
     padding: .8rem;
+}
+
+.nav-bg-active {
+    // animation: roll-up .5s ease-out both;
+    transform: translateY(0)!important;
+}
+    
+
+.nav-list-active {
+    visibility: visible;
+    opacity: 1;
 }
