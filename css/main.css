@@ -93,12 +93,6 @@
   width: 70%;
   margin: 0 auto; }
 
-@keyframes roll-up {
-  0% {
-    height: 0; }
-  100% {
-    height: 100vh; } }
-
 html {
   font-size: 62,5%;
   box-sizing: border-box; }
@@ -158,7 +152,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     transform: translateY(100%);
     background-image: linear-gradient(to right top, #09052f, #311d5e);
     z-index: -1;
