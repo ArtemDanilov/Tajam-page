@@ -9,6 +9,11 @@
         justify-content: space-around;
         align-items: center;
         margin-bottom: 6rem;
+
+        @media only screen and (max-width: $mq-xs) {
+            flex-direction: column;
+            margin-bottom: 3rem;
+        }
     }
 
     &__about--link {

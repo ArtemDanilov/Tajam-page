@@ -6,6 +6,10 @@
 
 .u-margin-top--s {
     margin-top: 2rem !important;
+
+    @media only screen and (max-width: $mq-xs) {
+        margin-top: 1.5rem !important
+    }
 }
 
 .u-margin-top--m {
@@ -13,6 +17,10 @@
 
     @media only screen and (max-width: $mq-md) {
         margin-top: 3rem !important;
+    }
+
+    @media only screen and (max-width: $mq-xs) {
+        margin-top: 2rem !important
     }
 }
 
@@ -22,6 +30,10 @@
     @media only screen and (max-width: $mq-md) {
         margin-top: 6rem !important;
     }
+
+    @media only screen and (max-width: $mq-xs) {
+        margin-top: 4rem !important
+    }
 }
 
 .u-margin-section {
@@ -29,6 +41,10 @@
 
     @media only screen and (max-width: $mq-md) {
         margin: 4rem 0 !important;
+    }
+
+    @media only screen and (max-width: $mq-xs) {
+        margin-top: 3rem !important
     }
 }
 
@@ -39,6 +55,10 @@
 
     @media only screen and (max-width: $mq-md) {
         padding: 4rem 0 !important;
+    }
+
+    @media only screen and (max-width: $mq-xs) {
+        padding: 2.5rem 0 !important;
     }
 }
 

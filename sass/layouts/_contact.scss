@@ -2,25 +2,36 @@
 
     // ********** FORM ********** //
 
+    &__form,
+    &__brands {
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+
     &__form {
         grid-column: col-start 1 / col-end 4;
 
         width: 90%;
-        
+
         @media only screen and (max-width: $mq-md) {
             grid-column: 3 / 9;
-            
+
             width: 100%;
         }
+
+        @media only screen and (max-width: $mq-sm) {
+            text-align: center;
+        }
     }
-    
+
     &__box {
         height: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    &__box > * {
+    &__box>* {
         margin-bottom: 1rem;
     }
 
@@ -48,13 +59,16 @@
 
     &__btn {
         align-self: flex-start;
-        margin: 0 !important;
+
+        @media only screen and (min-width: $mq-sm) {     // Center submit on devices with screen <= 700px
+            margin: 0 !important;    
+        }
     }
 
     &__btn:focus {
         outline: none;
     }
-    
+
     // ********** BRAND LOGOS ********** //
 
     &__brands {

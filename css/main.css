@@ -17,10 +17,15 @@
 .heading-1 {
   font-family: "Playfair_Display-bold", serif;
   font-size: 3rem;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  line-height: 2.5rem; }
   @media only screen and (max-width: 75rem) {
     .heading-1 {
       font-size: 2.5rem; } }
+  @media only screen and (max-width: 43.75rem) {
+    .heading-1 {
+      font-size: 2rem;
+      margin: 0 .2rem; } }
 
 .heading-2,
 .heading-3,
@@ -54,6 +59,9 @@
   font-family: "Playfair_Display", serif;
   font-size: 1rem;
   letter-spacing: 1px; }
+  @media only screen and (max-width: 43.75rem) {
+    .heading-6 {
+      margin: 0 .2rem; } }
 
 .paragraph {
   letter-spacing: .5px;
@@ -64,30 +72,45 @@
 
 .u-margin-top--s {
   margin-top: 2rem !important; }
+  @media only screen and (max-width: 32.5rem) {
+    .u-margin-top--s {
+      margin-top: 1.5rem !important; } }
 
 .u-margin-top--m {
   margin-top: 4rem !important; }
   @media only screen and (max-width: 62.5rem) {
     .u-margin-top--m {
       margin-top: 3rem !important; } }
+  @media only screen and (max-width: 32.5rem) {
+    .u-margin-top--m {
+      margin-top: 2rem !important; } }
 
 .u-margin-top--l {
   margin-top: 8rem !important; }
   @media only screen and (max-width: 62.5rem) {
     .u-margin-top--l {
       margin-top: 6rem !important; } }
+  @media only screen and (max-width: 32.5rem) {
+    .u-margin-top--l {
+      margin-top: 4rem !important; } }
 
 .u-margin-section {
   margin: 6rem 0 !important; }
   @media only screen and (max-width: 62.5rem) {
     .u-margin-section {
       margin: 4rem 0 !important; } }
+  @media only screen and (max-width: 32.5rem) {
+    .u-margin-section {
+      margin-top: 3rem !important; } }
 
 .u-padding-section {
   padding: 6rem 0 !important; }
   @media only screen and (max-width: 62.5rem) {
     .u-padding-section {
       padding: 4rem 0 !important; } }
+  @media only screen and (max-width: 32.5rem) {
+    .u-padding-section {
+      padding: 2.5rem 0 !important; } }
 
 .u-paragraph-center {
   width: 70%;
@@ -109,6 +132,9 @@ body {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.6; }
+  @media only screen and (max-width: 43.75rem) {
+    body {
+      font-size: 1rem; } }
 
 .container {
   display: grid;
@@ -139,9 +165,9 @@ body {
   top: 0;
   left: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 3rem;
   transition: all .3s; }
   .nav__logo {
     display: block;
@@ -235,8 +261,7 @@ body {
   background-color: #00e0d0; }
 
 .scroll-bg {
-  background-color: #311d5e;
-  padding: .8rem; }
+  background-color: #311d5e; }
 
 .nav-bg-active {
   transform: translateY(0) !important; }
@@ -249,12 +274,24 @@ body {
   grid-column: center-start / center-end;
   display: grid;
   grid-column-gap: 1rem; }
+  @media only screen and (max-width: 43.75rem) {
+    .story {
+      justify-items: center; } }
   .story__img {
     grid-column: col-start 1 / col-end 3;
     align-self: center; }
+    @media only screen and (max-width: 43.75rem) {
+      .story__img {
+        grid-column: 1 / -1; } }
   .story__text {
     grid-column: col-start 5 / col-end 10;
     margin-right: 2rem; }
+    @media only screen and (max-width: 43.75rem) {
+      .story__text {
+        grid-column: 1 / -1;
+        width: 90%;
+        margin-right: 0;
+        text-align: center; } }
 
 .video {
   grid-column: full-start / full-end;
@@ -321,6 +358,9 @@ body {
     grid-template-columns: repeat(auto-fit, 16rem);
     grid-gap: 2rem;
     justify-content: center; }
+    @media only screen and (max-width: 75rem) {
+      .team__leaders {
+        grid-template-columns: repeat(auto-fit, 14rem); } }
     @media only screen and (max-width: 62.5rem) {
       .team__leaders {
         grid-template-columns: repeat(auto-fit, minmax(16rem, 20rem)); } }
@@ -342,6 +382,10 @@ body {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 6rem; }
+    @media only screen and (max-width: 32.5rem) {
+      .portfolio__about {
+        flex-direction: column;
+        margin-bottom: 3rem; } }
   .portfolio__about--link:link, .portfolio__about--link:visited {
     color: #878786;
     text-decoration: none;
@@ -395,6 +439,9 @@ body {
     height: 5rem;
     border-radius: 5rem; }
 
+.contact__form h2, .contact__brands h2 {
+  margin-bottom: 2rem; }
+
 .contact__form {
   grid-column: col-start 1 / col-end 4;
   width: 90%; }
@@ -402,6 +449,9 @@ body {
     .contact__form {
       grid-column: 3 / 9;
       width: 100%; } }
+  @media only screen and (max-width: 43.75rem) {
+    .contact__form {
+      text-align: center; } }
 
 .contact__box {
   height: 100%;
@@ -429,8 +479,10 @@ body {
   resize: none; }
 
 .contact__btn {
-  align-self: flex-start;
-  margin: 0 !important; }
+  align-self: flex-start; }
+  @media only screen and (min-width: 43.75rem) {
+    .contact__btn {
+      margin: 0 !important; } }
 
 .contact__btn:focus {
   outline: none; }
@@ -485,11 +537,22 @@ body {
       justify-content: center; }
       .footer > * {
         width: 60%; } }
+  @media only screen and (max-width: 32.5rem) {
+    .footer {
+      margin-top: 3rem; }
+      .footer > * {
+        width: 90%; } }
   .footer__caption {
     margin: .8rem 0; }
+    @media only screen and (max-width: 43.75rem) {
+      .footer__caption {
+        text-align: center; } }
   .footer__text {
     grid-row: 1 / 2;
     grid-column: 2 / 3; }
+    @media only screen and (max-width: 43.75rem) {
+      .footer__text {
+        text-align: center; } }
   .footer__location {
     grid-row: 1 / 2;
     grid-column: 3 / 4; }
@@ -540,12 +603,21 @@ body {
     @media only screen and (max-width: 62.5rem) {
       .footer__privacy {
         text-align: center; } }
+  @media only screen and (max-width: 32.5rem) {
+    .footer__side {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
   .footer__side--link {
     text-decoration: none;
     color: #fff;
     transition: all .3s ease-in-out; }
     .footer__side--link:not(:last-child) {
       margin-right: 3rem; }
+      @media only screen and (max-width: 32.5rem) {
+        .footer__side--link:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: .5rem; } }
     .footer__side--link:hover {
       color: #00e0d0; }
   .footer__right {
