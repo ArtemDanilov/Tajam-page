@@ -9,13 +9,10 @@
 
     &__leaders {
         display: grid;
-        grid-template-columns: repeat(auto-fit, 16rem);
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(4, minmax(14rem, 18rem));
         grid-gap: 2rem;
         justify-content: center;
-
-        @media only screen and (max-width: $mq-lg) {
-            grid-template-columns: repeat(auto-fit, 14rem);
-        }
 
         @media only screen and (max-width: $mq-md) {
             grid-template-columns: repeat(auto-fit, minmax(16rem, 20rem));
