@@ -11,3 +11,14 @@ export function openNav() {
     bg.classList.toggle('nav-bg-active');
     navList.classList.toggle('nav-list-active');
 }
+
+export function smoothScroll(e) {
+    e.preventDefault();
+
+    const href = e.target.getAttribute("href")
+    
+    window.scrollTo({
+        top: document.querySelector(href).offsetTop - 50,
+        behavior: 'smooth'
+    })
+}
