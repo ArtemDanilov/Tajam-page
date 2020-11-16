@@ -5,7 +5,6 @@ const path = require("path");
 const isDevelopment = process.env.NODE_ENV === 'development'
 
 module.exports = {
-    mode: "production",
     entry: {
         main: "./js/main.js"
     },
@@ -23,6 +22,10 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.html$/,
+                use: ['html-loader']
             },
             {
                 test: /\.module\.s(a|c)ss$/,
@@ -64,14 +67,16 @@ module.exports = {
                 test: /\.(woff|woff2|ttf|eot|jpe?g|svg|png)$/i,
                 loader: 'file-loader',
                 options: {
-                    name: '[path][name].ext'
+                    name: '[path][name].[ext]'
                 }
             },
         ]
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].bundle.css",
         })
