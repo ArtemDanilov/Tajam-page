@@ -4,29 +4,33 @@
   "main": "index.js",
   "dependencies": {
     "autoprefixer": "^10.0.1",
-    "npm-run-all": "^4.1.5",
     "postcss": "^8.1.1",
-    "postcss-cli": "^8.0.0",
-    "sass": "^1.26.10",
-    "webpack-dev-server": "^3.11.0"
+    "sass": "^1.26.10"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
+    "@webpack-cli/serve": "^1.1.0",
     "babel-loader": "^8.1.0",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.1",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.4",
+    "sass-loader": "^10.0.3",
+    "serve": "^11.3.2",
+    "style-loader": "^2.0.0",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-clean-plugin": "^0.2.3",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server",
-    "compile:sass": "node-sass sass/main.scss css/main.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/main.comp.css -o css/main.prefix.css",
-    "compress:css": "node-sass css/main.prefix.css css/main.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --config webpack.config.js"
   },
   "author": "Artem Danilov",
   "license": "ISC",
