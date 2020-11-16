@@ -1,0 +1,72 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 16/11/2020 14:31
+    */
+
+  @font-face {
+    font-family: "Flaticon";
+    src: url("/fonts/font-icons/Flaticon.eot");
+    src: url("/fonts/font-icons/Flaticon.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/font-icons/Flaticon.woff2") format("woff2"),
+        url("/fonts/font-icons/Flaticon.woff") format("woff"),
+        url("/fonts/font-icons/Flaticon.ttf") format("truetype"),
+        url("/fonts/font-icons/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("/fonts/font-icons/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before {
+      display: inline-block;
+      font-family: "Flaticon";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      line-height: 1;
+      text-decoration: inherit;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+
+.flaticon-video:before { content: "\f100"; }
+.flaticon-computer:before { content: "\f101"; }
+.flaticon-brush:before { content: "\f102"; }
+.flaticon-smartphone:before { content: "\f103"; }
+.flaticon-pie-chart:before { content: "\f104"; }
+.flaticon-gameboy:before { content: "\f105"; }
+.flaticon-heart:before { content: "\f106"; }
+.flaticon-pin:before { content: "\f107"; }
+.flaticon-phone:before { content: "\f108"; }
+.flaticon-facebook:before { content: "\f109"; }
+.flaticon-twitter:before { content: "\f10a"; }
+.flaticon-basketball:before { content: "\f10b"; }
+.flaticon-logo:before { content: "\f10c"; }
+.flaticon-google-plus:before { content: "\f10d"; }
+.flaticon-send:before { content: "\f10e"; }
+.flaticon-video-1:before { content: "\f10f"; }
+    
+    $font-Flaticon-video: "\f100";
+    $font-Flaticon-computer: "\f101";
+    $font-Flaticon-brush: "\f102";
+    $font-Flaticon-smartphone: "\f103";
+    $font-Flaticon-pie-chart: "\f104";
+    $font-Flaticon-gameboy: "\f105";
+    $font-Flaticon-heart: "\f106";
+    $font-Flaticon-pin: "\f107";
+    $font-Flaticon-phone: "\f108";
+    $font-Flaticon-facebook: "\f109";
+    $font-Flaticon-twitter: "\f10a";
+    $font-Flaticon-basketball: "\f10b";
+    $font-Flaticon-logo: "\f10c";
+    $font-Flaticon-google-plus: "\f10d";
+    $font-Flaticon-send: "\f10e";
+    $font-Flaticon-video-1: "\f10f";
