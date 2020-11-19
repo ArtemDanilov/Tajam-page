@@ -142,11 +142,15 @@
     
     &__item {
         display: inline-block;
-        width: 15px;
-        height: 15px;
+        width: 10px;
+        height: 10px;
         border: 1px solid $color-white;
         border-radius: 50%;
         cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
     }
 }
 
