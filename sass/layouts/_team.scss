@@ -15,7 +15,8 @@
         justify-content: center;
 
         @media only screen and (max-width: $mq-md) {
-            grid-template-columns: repeat(auto-fit, minmax(16rem, 20rem));
+            grid-template-columns: repeat(auto-fit, minmax(16rem, 26rem));
+            grid-gap: 3rem;
         }
     }
 }
