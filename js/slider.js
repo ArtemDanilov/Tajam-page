@@ -5,9 +5,9 @@ let index = 0;
 let time = 3000;
 
 const images = [ 
-    '../images/forest.jpg',
-    '../images/forest-2.jpg',
-    '../images/forest-3.jpg'
+    './images/forest.jpg',
+    './images/forest-2.jpg',
+    './images/forest-3.jpg'
 ]
 
     function imgSlider() {
