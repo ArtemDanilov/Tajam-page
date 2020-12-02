@@ -1,6 +1,7 @@
 import "../sass/main.scss"
 
 import { bgNav, openNav, smoothScroll } from "./navbar.js";
+import "./slider.js";
 
 const btn = document.getElementById("hamburger")
 const links = document.querySelectorAll(".nav__list--item");
