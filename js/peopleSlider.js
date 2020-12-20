@@ -1,3 +1,5 @@
+import anime from 'animejs/lib/anime.es.js';
+
 const people = [...document.querySelectorAll(".people__img-container--img")];
 
 const prevBtn = document.getElementById("prevBtn")
@@ -31,6 +33,14 @@ export default function personPresentation() {
     
     document.querySelector('.people__slider').before(div)
     div.classList.add('people__present')
+
+    anime({
+        targets: '.people__present',
+        translateX: [-30, 0],
+        opacity: [0,1],
+        transition: 100,
+        easing: 'easeOutExpo'
+    })
 }
 
 prevBtn.addEventListener('click', () => {
