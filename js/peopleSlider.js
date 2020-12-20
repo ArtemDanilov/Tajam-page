@@ -26,7 +26,7 @@ const peopleData = [
 const div = document.createElement('div')
 let index = 1;
 
-export default function personPresentation() {
+function personPresentation() {  // Add Full Name and Profession of person 
     div.innerHTML = `
     <h4 class="heading-4 u-margin-top--m people__name" id="targetName">${peopleData[index].fullName}</h4>
     <p class="paragraph people__profession" id="targetProfession">${peopleData[index].profession}</p> `
@@ -38,12 +38,16 @@ export default function personPresentation() {
         targets: '.people__present',
         translateX: [-30, 0],
         opacity: [0,1],
-        transition: 100,
         easing: 'easeOutExpo'
     })
 }
 
-prevBtn.addEventListener('click', () => {
+const personInformation = () => {
+    fullName.innerHTML = peopleData[index].fullName
+    profession.innerHTML = peopleData[index].profession
+}
+
+prevBtn.addEventListener('click', () => {  
     people[index].classList.remove("img-active")
     
     if (index === 0) index = people.length;
@@ -52,8 +56,7 @@ prevBtn.addEventListener('click', () => {
     people[index].classList.add("img-active") 
     
     personPresentation()
-    fullName.innerHTML = peopleData[index].fullName
-    profession.innerHTML = peopleData[index].profession
+    personInformation
 })
 
 nextBtn.addEventListener('click', () => {
@@ -65,6 +68,20 @@ nextBtn.addEventListener('click', () => {
     people[index].classList.add("img-active")
     
     personPresentation()
-    fullName.innerHTML = peopleData[index].fullName
-    profession.innerHTML = peopleData[index].profession
+    personInformation
 })
+
+people.forEach( (person, i) => {
+    person.addEventListener( 'click', () => {
+        people[index].classList.remove("img-active")
+        
+        index = i
+        
+        person.classList.add("img-active")
+
+        personPresentation()
+        personInformation
+    })
+}) 
+
+export default personPresentation

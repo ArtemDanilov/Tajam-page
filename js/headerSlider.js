@@ -1,8 +1,10 @@
-const bg = document.querySelector('.header');
+import anime from 'animejs/lib/anime.es.js';
+
+const bg = document.querySelector('.header__photo-slider');
 const dots = [...document.querySelectorAll('.slide-nav__item')];
 
 let index = 0;
-let time = 3000;
+let time = 5000;
 
 const images = [ 
     './images/forest.jpg',
@@ -10,10 +12,21 @@ const images = [
     './images/forest-3.jpg'
 ]
 
+const animation = (selector) => {
+    anime({
+        targets: selector,
+        opacity: [0.9, 1],
+        duration: 2000,
+        easing: 'easeOutExpo'
+    })
+}
+
     function imgSlider() {
         index++
         if (index === images.length) index = 0
         bg.style.backgroundImage = `linear-gradient(to right bottom, rgba(9, 5, 47, .8), rgba(49, 29, 94, .8)), url(${images[index]})`
+
+        animation('.header__photo-slider')
     }
     
     function dotSlider() {
@@ -40,6 +53,8 @@ const images = [
         
         clearInterval(dotSliderTiming)
         dotSliderTiming = setInterval(dotSlider, time)
+
+        animation('.header__photo-slider')
     }))
 
 
