@@ -1,5 +1,6 @@
-const nav = document.querySelector('.nav');
-const bg = document.querySelector('.nav-bg');
+const btn = document.getElementById("hamburger")
+const nav = document.querySelector('.nav')
+const bg = document.querySelector('.nav-bg')
 const navList = document.querySelector('.nav__list')
 
 export function bgNav() {
@@ -21,4 +22,8 @@ export function smoothScroll(e) {
         top: document.querySelector(href).offsetTop - 50,
         behavior: 'smooth'
     })
+
+    btn.click()
 }
+
+btn.addEventListener('click', openNav);
