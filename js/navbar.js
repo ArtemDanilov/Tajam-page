@@ -23,7 +23,7 @@ export function smoothScroll(e) {
         behavior: 'smooth'
     })
 
-    btn.click()
+    if (window.innerWidth <= 1000) btn.click()
 }
 
 btn.addEventListener('click', openNav);
