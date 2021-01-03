@@ -9,6 +9,8 @@
         justify-content: space-around;
         align-items: center;
         margin-bottom: 6rem;
+        opacity: 0;
+        transform: translateY(50px);
 
         @media only screen and (max-width: $mq-xs) {
             flex-direction: column;
@@ -46,6 +48,7 @@
     &__item {
         width: 100%;
         height: 100%;
+        opacity: 0;
     }
 
     &__img {
