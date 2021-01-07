@@ -65,7 +65,7 @@
     </section>
 
     <section class="video" id="video-section">
-      <button class="video__play-btn">
+      <button class="video__play-btn" id="playBtn">
         <i class="video__icon fi flaticon-video"></i>
       </button>
       <h4 class="heading-4">Watch our story</h4>
@@ -330,6 +330,40 @@
       </div>
     </footer>
 
+    <div class="popup-video">
+      <div class="close-btn" id="close">
+        <span class="close-btn__item"></span>
+      </div>
+      <div class="popup-video__item" id="player"></div>
+    </div>
+
+    <script>
+            const tag = document.createElement('script');
+
+              tag.src = "https://www.youtube.com/iframe_api";
+              const firstScriptTag = document.getElementsByTagName('script')[0];
+              firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+              let player;
+              function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                  height: '360',
+                  width: '640',
+                  videoId: 'cy2NXszDdCM',
+                  playerVars: {
+                    'modestbranding': 1,
+                  },
+                  events: {
+                    'onReady': onPlayerReady,
+                  }
+                });
+              }
+
+              function onPlayerReady(event) {
+                event.target.setVolume(20);
+                // event.target.playVideo();
+              }
+    </script>
   </div>
 </body>
 
