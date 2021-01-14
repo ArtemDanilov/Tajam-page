@@ -92,6 +92,10 @@
         column-gap: 2rem;
         row-gap: 1rem;
 
+        @media only screen and (min-width: $mq-big) {
+            grid-template-columns: repeat(4, minmax(6rem, 10rem));
+        }
+
         @media only screen and (max-width: $mq-md) {
             grid-template-columns: repeat(auto-fit, minmax(6rem, 10rem));
             grid-template-rows: repeat(2, 1fr);
