@@ -1,18 +1,24 @@
 .popup-video {
-    visibility: hidden;
     position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba($color-fiolet-dark, .8);
     z-index: 1000;
     overflow: hidden;
-    transition: .2s ease-in;
+    visibility: hidden;
+    transition: .2s ease-in; 
 
     &__item {
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        max-width: 50rem;
+        max-height: 30%;
+
+        @media only screen and (max-width: $mq-xs) {
+            width: 90%;
+        }
     }
 }
 
@@ -26,6 +32,11 @@
     top: 4rem;
     right: 5rem;
     cursor: pointer;
+
+    @media only screen and (max-width: $mq-xs) {
+        top: 2rem;
+        right: 2rem;
+    }
 
     &__item {
         display: block;
