@@ -4,7 +4,6 @@ import "./headerSlider"
 import { bgNav, smoothScroll } from "./navbar.js";
 import peopleSlider from "./peopleSlider"
 import display from './displayContent'
-import './popup'
 
 const links = document.querySelectorAll(".nav__list--item");
 
